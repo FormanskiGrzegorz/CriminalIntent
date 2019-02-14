@@ -12,6 +12,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
+import static android.widget.CompoundButton.*;
+
 public class CrimeFragment extends Fragment {
     private Crime mCrime;
     private EditText mTitleField;
@@ -51,7 +53,7 @@ public class CrimeFragment extends Fragment {
         mDateButton.setEnabled(false);
 
         mSolvedCheckBox = v.findViewById(R.id.crime_solved);
-        mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        mSolvedCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 mCrime.setSolved(isChecked);
